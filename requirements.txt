@@ -1,3 +1,8 @@
+# Linux (Ubuntu) System Library
+# This is needed to resolve the libGL.so.1 missing error for OpenCV
+# Adjust the package name if you are using a different Linux distribution
+# (e.g., CentOS, Fedora, etc.)
+libgl1-mesa-glx==20.0.8
 opencv-python
 streamlit
 
