@@ -3,7 +3,9 @@ import streamlit as st
 import numpy as np
 
 # Try accessing the camera by name
-cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
+camera_name = '/dev/video0'  # Replace with the name or identifier of your camera device
+video_capture = cv2.VideoCapture(camera_name, cv2.CAP_V4L2)
+
 def detect_sexual_arousal(frame):
     # Face detection using Haar Cascade Classifier
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
